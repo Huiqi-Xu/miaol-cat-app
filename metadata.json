@@ -1,0 +1,6 @@
+{
+  "name": "喵了个咪 - 宠粉神器",
+  "description": "喵星人翻译百科与心情档案，随时随地听懂主子的心声。",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["AI Translation", "Encyclopedia", "Profile Management"]
+}

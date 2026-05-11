@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Quicksand:wght@300..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #fff8f4;
+  --color-surface-dim: #e8d7c7;
+  --color-surface-bright: #fff8f4;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #fff1e4;
+  --color-surface-container: #fcebda;
+  --color-surface-container-high: #f6e6d4;
+  --color-surface-container-highest: #f0e0cf;
+  --color-on-surface: #221a10;
+  --color-on-surface-variant: #544437;
+  --color-inverse-surface: #382f23;
+  --color-inverse-on-surface: #ffeedd;
+  --color-outline: #877365;
+  --color-outline-variant: #dac2b1;
+  --color-surface-tint: #8f4e00;
+  --color-primary: #8f4e00;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #ff9f43;
+  --color-on-primary-container: #6d3a00;
+  --color-inverse-primary: #ffb77a;
+  --color-secondary: #903e8b;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #fd9df1;
+  --color-on-secondary-container: #7c2c78;
+  --color-tertiary: #615f51;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #bab6a6;
+  --color-on-tertiary-container: #49473b;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+  --color-primary-fixed: #ffdcc2;
+  --color-primary-fixed-dim: #ffb77a;
+  --on-primary-fixed: #2e1500;
+  --on-primary-fixed-variant: #6d3a00;
+  --color-secondary-fixed: #ffd7f5;
+  --color-secondary-fixed-dim: #ffabf3;
+  --on-secondary-fixed: #380038;
+  --on-secondary-fixed-variant: #742571;
+  --color-tertiary-fixed: #e7e3d1;
+  --color-tertiary-fixed-dim: #cbc7b6;
+  --on-tertiary-fixed: #1d1c11;
+  --on-tertiary-fixed-variant: #49473a;
+  --color-background: #fff8f4;
+  --color-on-background: #221a10;
+  --color-surface-variant: #f0e0cf;
+
+  --font-sans: "Nunito Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Quicksand", sans-serif;
+  --font-label: "Comfortaa", sans-serif;
+
+  --radius-xs: 0.5rem;
+  --radius-sm: 1rem;
+  --radius-md: 1.5rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+}
+
+@layer base {
+  body {
+    @apply bg-[#FFF8F4] text-on-surface font-sans selection:bg-primary-fixed;
+    background-image: 
+      radial-gradient(circle at 2px 2px, #f0e0cf 1.5px, transparent 0);
+    background-size: 24px 24px;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer utilities {
+  .orb-glow {
+    box-shadow: 0 0 50px 10px rgba(255, 159, 67, 0.3);
+  }
+  
+  .squishy-card {
+    box-shadow: 0px 8px 30px rgba(255, 159, 67, 0.08);
+  }
+
+  .bubble-tail::after {
+    content: '';
+    @apply absolute -bottom-4 left-1/2 -translate-x-1/2;
+    border-width: 16px 12px 0 12px;
+    border-style: solid;
+    border-color: #ffffff transparent transparent transparent;
+  }
+
+  .safe-bottom {
+    padding-bottom: calc(1.5rem + env(safe-area-inset-bottom));
+  }
+}
